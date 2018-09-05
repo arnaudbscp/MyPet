@@ -50,4 +50,5 @@ public class Adulte extends Personnage implements Actions{
 	    this.setFaim(getFaim()-2);
 	    return 0;
 	}
+	
 }
