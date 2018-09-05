@@ -43,8 +43,9 @@ class PetAfficheur {
         perso += "\n";
 
         perso += readTxt(personnage, "resources/PersonnageOeuf.txt");
-        perso += "\n======================================= Menu =====================================\n";
-        perso += "[1]: Manger - [2]: Dormir - [3]: Soigner - [4]: Carresser - [5]: Jouer - [6]: Laver";
+        perso += "\n+========================================= Menu =========================================+\n";
+        perso += "|  [1]: Manger - [2]: Dormir - [3]: Soigner - [4]: Carresser - [5]: Jouer - [6]: Laver   |";
+        perso += "\n+========================================================================================+\n";
         System.out.println(perso);
     }
 
