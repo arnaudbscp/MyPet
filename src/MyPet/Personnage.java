@@ -6,9 +6,19 @@ public abstract class Personnage {
 	private int faim;
 	private int bonheur;
 	private int sante;
+	private int tempo;
 	
 	public Personnage(String prenom) {
 		this.prenom = prenom;
+		this.tempo = 0;
+	}
+
+	public int getTempo() {
+		return tempo;
+	}
+
+	public void setTempo(int tempo) {
+		this.tempo = tempo;
 	}
 
 	public int getEnergie() {
