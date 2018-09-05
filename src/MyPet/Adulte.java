@@ -3,6 +3,7 @@ package MyPet;
 public class Adulte extends Personnage implements Actions{    
 	public Adulte(String prenom) {
 	    super(prenom);
+	    this.setDureeDeVie(6);
 	}    
 	
 	// avantage santé , -6 en energie, -4 en faim
@@ -48,7 +49,7 @@ public class Adulte extends Personnage implements Actions{
 	    this.setBonheur(getBonheur()+1);
 	    this.setEnergie(getEnergie()-3);
 	    this.setFaim(getFaim()-2);
-	    return 0;
+	    return 3;
 	}
 	
 }
