@@ -11,8 +11,15 @@ public class Partie {
 		//this.petAfficheur = petAfficheur;
 	}
 	
+	public void journeeEcoulee() {
+		this.compteurJours ++;
+	}
+	
 	public boolean testJourneeEcoulee() {
-		if(pet.getTempo()%12 == 0) return true;
+		if(pet.getTempo()%12 == 0) {
+			this.journeeEcoulee();
+			return true;
+		}
 		return false;
 	}
 	
