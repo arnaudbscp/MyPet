@@ -1,6 +1,6 @@
 package MyPet;
 
-public class Adulte extends Personnage implements Actions{    
+public class Adulte extends Personnage{    
 	public Adulte(String prenom) {
 	    super(prenom);
 	    this.setDureeDeVie(6);
