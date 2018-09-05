@@ -7,7 +7,16 @@ public abstract class Personnage {
 	private int bonheur;
 	private int sante;
 	private int tempo;
+	private int dureeDeVie;
 	
+	public int getDureeDeVie() {
+		return dureeDeVie;
+	}
+
+	public void setDureeDeVie(int dureeDeVie) {
+		this.dureeDeVie = dureeDeVie;
+	}
+
 	public Personnage(String prenom) {
 		this.prenom = prenom;
 		this.tempo = 0;
@@ -55,6 +64,19 @@ public abstract class Personnage {
 
 	public String getPrenom() {
 		return prenom;
+	}
+	
+	public boolean jaugeVide(int stat) {
+		if(stat<=0) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean estMort() {
+		if(jaugeVide(this.sante) || jaugeVide(this.faim) || (tempo/12)==13) return true;
+		return false;
 	}
 	
 }
