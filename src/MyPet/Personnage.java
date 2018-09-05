@@ -74,6 +74,13 @@ public abstract class Personnage {
 		}
 	}
 	
+	abstract int soigner();
+	abstract int dormir();
+	abstract int laver();
+	abstract int caresser();
+	abstract int mangerBoire();
+	abstract int jouer();
+	
 	public boolean estMort() {
 		if(jaugeVide(this.sante) || jaugeVide(this.faim) || (tempo/12)==13) return true;
 		return false;

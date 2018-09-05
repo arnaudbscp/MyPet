@@ -1,6 +1,6 @@
 package MyPet;
 
-public class Ado extends Personnage implements Actions{
+public class Ado extends Personnage {
     
     public Ado(String prenom) {
         super(prenom);

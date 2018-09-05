@@ -1,6 +1,6 @@
 package MyPet;
 
-public class Oeuf extends Personnage implements Actions {
+public class Oeuf extends Personnage {
 
 	public Oeuf(String prenom) {
 		super(prenom);
