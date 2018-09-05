@@ -11,24 +11,32 @@ public class Adulte extends Personnage implements Actions{
 	    this.setSante(getSante()+2);
 	    this.setEnergie(getEnergie()-2);
 	    return 1;
-	}    @Override
+	}    
+	
+	@Override
 	public int dormir() {
 	    this.setEnergie(getEnergie()+3);
 	    this.setFaim(getFaim()-2);
 	    return 5;
-	}    @Override
+	}    
+	
+	@Override
 	public int laver() {
 	    this.setBonheur(getBonheur()+1);
 	    this.setEnergie(getEnergie()-1);
 	    this.setSante(getSante()+1);
 	    return 1;
-	}    @Override
+	}    
+	
+	@Override
 	public int caresser() {
 	    this.setBonheur(getBonheur()+3);
 	    this.setFaim(getFaim()-2);
 	    this.setEnergie(getEnergie()-2);
 	    return 3;
-	}    @Override
+	}    
+	
+	@Override
 	public int mangerBoire() {
 	    this.setFaim(getFaim()+2);
 	    this.setEnergie(getEnergie()-1);
@@ -42,4 +50,5 @@ public class Adulte extends Personnage implements Actions{
 	    this.setFaim(getFaim()-2);
 	    return 0;
 	}
+	
 }
