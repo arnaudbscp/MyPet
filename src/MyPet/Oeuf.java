@@ -9,6 +9,7 @@ public class Oeuf extends Personnage implements Actions {
 		this.setEnergie(5);
 		this.setFaim(5);
 		this.setSante(5);
+		
 		// TODO Auto-generated constructor stub
 	}
 	
