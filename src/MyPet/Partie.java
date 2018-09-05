@@ -34,4 +34,8 @@ public class Partie {
 		String instruction = sc.nextLine();
 		return Integer.parseInt(instruction);
 	}
+	
+	public boolean verifEntree(int instruct) {
+		return instruct >=1 && instruct <=6;
+	}
 }
