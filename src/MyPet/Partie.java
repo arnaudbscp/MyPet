@@ -4,12 +4,10 @@ import java.util.Scanner;
 public class Partie {
 	private Personnage pet;
 	private int compteurJours;
-	//private PetAfficheur petAfficheur;
 	
-	public Partie(String prenom /*, PetAfficheur petAfficheur*/) {
+	public Partie(String prenom) {
 		this.pet = new Oeuf(prenom);
-		this.compteurJours = 0;
-		//this.petAfficheur = petAfficheur;
+		compteurJours = 0;
 	}
 	
 	
@@ -38,8 +36,8 @@ public class Partie {
 	}
 	
 	public void finDePartie() {
-		//petAfficheur.affichageFin();
-		//PetAfficheur.affichageDebut();
+		//Todo : Affichage de fin de partie
+		PetAfficheur.printPersonnage(pet);
 	}
 	
 	public int lireInstruction() {
