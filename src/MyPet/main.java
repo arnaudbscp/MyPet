@@ -11,11 +11,10 @@ public class main {
 		Personnage perso = partie.getPet();
 		PetAfficheur.printPersonnage(perso);
 		
-		while(instruc < 1 || instruc > 7) {
+		while(!partie.verifEntree(instruc)) {
 			
 			System.out.println("Que voulez-vous faire ?\n");
 			instruc = partie.lireInstruction();
-			System.out.println(instruc);
 			
 			switch(instruc) {
 			
