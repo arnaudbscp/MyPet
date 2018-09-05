@@ -21,7 +21,7 @@ class PetAfficheur {
                             break;
                         case  6:
                             jauge = jauge.replace("pet.sante", personnage.getFaim()+"");
-                            jauge = jauge.replace("pet.nom", (personnage.getTempo()%12)+"");
+                            jauge = jauge.replace("pet.age", (personnage.getTempo()%12)+"");
                             break;
                         case  10:
                             jauge = jauge.replace("pet.sante", personnage.getEnergie()+"");
