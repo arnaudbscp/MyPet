@@ -78,5 +78,4 @@ public abstract class Personnage {
 		if(jaugeVide(this.sante) || jaugeVide(this.faim) || (tempo/12)==13) return true;
 		return false;
 	}
-	
 }
