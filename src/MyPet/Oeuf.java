@@ -9,7 +9,7 @@ public class Oeuf extends Personnage implements Actions {
 
 	@Override
 	public int soigner() {
-		
+		return 0;
 	}
 
 	@Override
