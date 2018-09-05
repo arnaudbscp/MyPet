@@ -6,12 +6,25 @@ public class Partie {
 	private int compteurJours;
 	//private PetAfficheur petAfficheur;
 	
-	public Partie(Personnage pet /*, PetAfficheur petAfficheur*/) {
-		this.pet = pet;
+	public Partie(String prenom /*, PetAfficheur petAfficheur*/) {
+		this.pet = new Oeuf(prenom);
 		this.compteurJours = 0;
 		//this.petAfficheur = petAfficheur;
 	}
 	
+	
+	public Personnage getPet() {
+		return pet;
+	}
+
+
+
+	public void setPet(Personnage pet) {
+		this.pet = pet;
+	}
+
+
+
 	public void journeeEcoulee() {
 		this.compteurJours ++;
 	}
