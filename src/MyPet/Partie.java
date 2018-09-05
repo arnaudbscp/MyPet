@@ -1,4 +1,5 @@
 package MyPet;
+import java.util.Scanner;
 
 public class Partie {
 	private Personnage pet;
@@ -26,5 +27,11 @@ public class Partie {
 	public void finDePartie() {
 		//petAfficheur.affichageFin();
 		//PetAfficheur.affichageDebut();
+	}
+	
+	public int lireInstruction() {
+		Scanner sc = new Scanner(System.in);
+		String instruction = sc.nextLine();
+		return Integer.parseInt(instruction);
 	}
 }
