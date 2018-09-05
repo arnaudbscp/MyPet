@@ -1,0 +1,15 @@
++---------+                          
+|         | SANTE   : pet.sante / (3-6-9)   NOM : pet.nom 
++---------+                          
+                                     
++---------+                          
+|         | FAIM    : pet.faim / (3/9/6)    AGE : pet.age
++---------+                          
+                                     
++---------+                          
+|         | ENERGIE : pet.energie / (3/9/6)   
++---------+                          
+                                     
++---------+                          
+|         | BONHEUR : pet.bonheur / (9/3/6)   
++---------+                          
