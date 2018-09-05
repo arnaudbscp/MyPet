@@ -42,6 +42,5 @@ public class Enfant extends Personnage implements Actions{
 		return 0;
 	}
 	
-	
 
 }

@@ -20,5 +20,4 @@ public class Partie {
 		//petAfficheur.affichageFin();
 		//PetAfficheur.affichageDebut();
 	}
-
 }
