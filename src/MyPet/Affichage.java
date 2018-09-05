@@ -6,19 +6,32 @@ import java.io.FileReader;
 import java.io.IOException;
 
 class PetAfficheur {
-    public static void printPersonnage(Personnage personnage){
-        String affichage = "PET\n";
+    private static String readTxt(Personnage personnage, String resources){
+        String res = "";
         try {
-            BufferedReader brStat = new BufferedReader(new FileReader("resources/affichageStat.txt"));
+            BufferedReader brStat = new BufferedReader(new FileReader(resources));
             try {
                 String jauge = brStat.readLine();
                 int i = 0;
                 while(jauge != null){
-                    jauge = ((i+2) == 2) ? jauge : jauge.replace("pet.sante", personnage.getSante()+"");
-                    jauge = ((i+2) == 6) ? jauge : jauge.replace("pet.faim", personnage.getFaim()+"");
-                    jauge = ((i+2) == 10) ? jauge : jauge.replace("pet.energie", personnage.getEnergie()+"");
-                    jauge = ((i+2) == 14) ? jauge : jauge.replace("pet.bonheur", personnage.getBonheur()+"");
-                    affichage += jauge + "\n";
+                    switch (i+2){
+                        case  2:
+                            jauge = jauge.replace("pet.sante", personnage.getSante()+"");
+                            jauge = jauge.replace("pet.nom", personnage.getPrenom() + "");
+                            break;
+                        case  6:
+                            jauge = jauge.replace("pet.sante", personnage.getFaim()+"");
+                            jauge = jauge.replace("pet.nom", (personnage.getTempo()%12)+"");
+                            break;
+                        case  10:
+                            jauge = jauge.replace("pet.sante", personnage.getEnergie()+"");
+                            break;
+                        case  14:
+                            jauge = jauge.replace("pet.sante", personnage.getBonheur()+"");
+                            break;
+                    }
+
+                    res += jauge + "\n";
                     jauge = brStat.readLine();
                     i++;
                 }
@@ -29,13 +42,12 @@ class PetAfficheur {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println(affichage);
-
+        return res;
     }
-
-    public static void main(String[] args) {
-        System.out.println("PETMY");
-        PetAfficheur.printPersonnage(new Oeuf("Test"));
-        System.out.println("Fin");
+    public static void printPersonnage(Personnage personnage){
+        String jauges = readTxt(personnage, "resources/affichageStat.txt");
+        String perso = readTxt(personnage, "resources/PersonnageOeuf.txt");
+        System.out.println(jauges);
+        System.out.println(perso);
     }
 }
