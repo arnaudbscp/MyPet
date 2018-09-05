@@ -11,28 +11,11 @@ class PetAfficheur {
         try {
             BufferedReader brStat = new BufferedReader(new FileReader(resources));
             try {
-                String jauge = brStat.readLine();
+                String line = brStat.readLine();
                 int i = 0;
-                while(jauge != null){
-                    switch (i+2){
-                        case  2:
-                            jauge = jauge.replace("pet.sante", personnage.getSante()+"");
-                            jauge = jauge.replace("pet.nom", personnage.getPrenom() + "");
-                            break;
-                        case  6:
-                            jauge = jauge.replace("pet.sante", personnage.getFaim()+"");
-                            jauge = jauge.replace("pet.age", (personnage.getTempo()%12)+"");
-                            break;
-                        case  10:
-                            jauge = jauge.replace("pet.sante", personnage.getEnergie()+"");
-                            break;
-                        case  14:
-                            jauge = jauge.replace("pet.sante", personnage.getBonheur()+"");
-                            break;
-                    }
-
-                    res += jauge + "\n";
-                    jauge = brStat.readLine();
+                while(line != null){
+                    res += line + "\n";
+                    line = brStat.readLine();
                     i++;
                 }
                 brStat.close();
@@ -44,10 +27,32 @@ class PetAfficheur {
         }
         return res;
     }
+
     public static void printPersonnage(Personnage personnage){
-        String jauges = readTxt(personnage, "resources/affichageStat.txt");
-        String perso = readTxt(personnage, "resources/PersonnageOeuf.txt");
-        System.out.println(jauges);
+        int niveauFaim = personnage.getFaim();
+        int niveauEnergie = personnage.getEnergie();
+        int niveauSante = personnage.getSante();
+        int niveauBonheur = personnage.getBonheur();
+
+        String perso = "";
+        perso += "           ";
+        perso += "Faim: ["+niveauFaim+"]"+printStat(niveauFaim, "☕") + "   ";
+        perso += "Energie: ["+niveauEnergie+"]"+printStat(niveauEnergie, "⚡") + "   ";
+        perso += "Bonheur: ["+niveauBonheur+"]"+printStat(niveauBonheur, "\uD83D\uDE00") + "   ";
+        perso += "Santé: ["+niveauSante+"]"+printStat(niveauSante, "❤") + "   ";
+        perso += "\n";
+
+        perso += readTxt(personnage, "resources/PersonnageOeuf.txt");
+        perso += "\n======================================= Menu =====================================\n";
+        perso += "[1]: Manger - [2]: Dormir - [3]: Soigner - [4]: Carresser - [5]: Jouer - [6]: Laver";
         System.out.println(perso);
+    }
+
+    private static String printStat(int niveau, String s) {
+        String res = "";
+        for (int i = 0; i < niveau; i++) {
+            res += s;
+        }
+        return res;
     }
 }
