@@ -57,7 +57,7 @@ public class Partie {
             && 0 < Integer.parseInt(input) && Integer.parseInt(input) < 7;
 	}
 	
-	public void evolution() { // modifier duree de vie du stade, diviser par deux le nb de jours (passe trop vite)
+	public void evolution() {
 		if(getPet().getDureeDeVie() == compteurJours) {
 			if(getPet().getClass().getName() == "MyPet.Oeuf") {
 				Enfant e = new Enfant(getPet().getPrenom());
