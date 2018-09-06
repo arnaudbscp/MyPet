@@ -5,9 +5,9 @@
  |      00888888#0OOOOOO00       | ;
  |     0088888888##8OOOOO00      | ;    Faim    : [faim] jaugeFaim
  |    008888888888#888OOOO00     | ;    Energie : [energie] jaugeEnergie
- |    008888888888##8888OO00     | ;    Bonheur : [bonheur] jaugeBonheur
- |    0088888888888####88800     | ;    Santé   : [sante] jaugeSante
- |    0088888##888##88#88800     | ;
+ |    008888888   ##8888OO00     | ;    Bonheur : [bonheur] jaugeBonheur
+ |    008888 ADULTE ###88800     | ;    Santé   : [sante] jaugeSante
+ |    0088888##  8##88#88800     | ;
  |    00888888#####888888800     | ;
  |    0088888888888888888800     | ;  +------------------- MENU ------------------+
  |    00OOOO8888888888888800     | ;  |   2 : DORMIR                              |
