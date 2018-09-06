@@ -11,7 +11,22 @@ public class MainApp {
 		while(!perso.estMort()) {
 			perso = partie.getPet();
 			tempo = perso.getTempo();
+			
+			if(perso.estAffame()) {
+				perso.perteSante();
+				System.out.println("J'ai faim, je vais finir par tomber malade !");
+			}
+				
+			if(perso.estTriste()) {
+				perso.perteEnergie();
+				System.out.println("Je suis trop triste, ça me fatigue !");
+			}
+			
+			
 			PetAfficheur.printPersonnage(perso);
+			
+			
+			
 			int choix  = partie.lireInstruction();
 			switch(choix) {
 				case 1:

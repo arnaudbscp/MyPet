@@ -120,10 +120,33 @@ public abstract class Personnage {
 	abstract String messageInit();
 	
 	public boolean estMort() {
-		if(jaugeVide(this.sante) || jaugeVide(this.faim) || (tempo/12)==13) return true;
+		if(jaugeVide(sante) || (tempo/12)==13) return true;
 		return false;
 	}
-
+	
+	public boolean estAffame() {
+		if(jaugeVide(faim)) return true;
+		return false;
+	}
+	
+	public boolean estTriste() {
+		if(jaugeVide(bonheur)) return true;
+		return false;
+	}
+	
+	public boolean estEpuise() {
+		if(jaugeVide(energie)) return true;
+		return false;
+	}//Todo : méthode mettant toutes les options à dormir
+	
+	public void perteSante() {
+		setSante(sante-1);
+	}
+	
+	public void perteEnergie() {
+		setEnergie(energie-1);
+	}
+	
 	@Override
 	public String toString() {
 		return "";
