@@ -4,7 +4,16 @@ public class Ado extends Personnage {
     
     public Ado(String prenom) {
         super(prenom);
+        /* Initialisations des Paliers Ados*/
+    	this.maxBonheur=6;
+    	this.maxEnergie=9;
+    	this.maxFaim=9;
+    	this.maxSante=3;
+        
     }
+    
+
+    
         @Override
     public int soigner() {
         this.setSante(getSante()+2);
@@ -49,5 +58,12 @@ public class Ado extends Personnage {
         this.setFaim(getFaim()-3);
         return 5;
     }
+    
+    @Override
+	public String messageInit() {
+		return "__Me voici à l'âge ingrat... Je risque d'être plus facilement de mauvaise humeur et d'avoir faim, très faim !__"
+				+ "Mais j'ai confiance en toi, je sais que tu vas t'en sortir avec moi !"
+				+ "C'EST A TOI !\n";
+	}
     
 }

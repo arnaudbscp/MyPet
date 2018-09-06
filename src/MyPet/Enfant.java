@@ -4,6 +4,14 @@ public class Enfant extends Personnage {
 	
 	public Enfant(String prenom) {
 		super(prenom);
+
+		this.setDureeDeVie(3);
+		/* Initialisations des Paliers Enfants */
+		this.maxBonheur=9;
+		this.maxEnergie=3;
+		this.maxFaim=3;
+		this.maxSante=3;
+
 	}
 
 	@Override
@@ -49,6 +57,15 @@ public class Enfant extends Personnage {
 		this.setEnergie(getEnergie()-3);
 		this.setFaim(getFaim()-1);
 		return 3;
+	}
+	
+	@Override
+	public String messageInit() {
+		return "__Hé, j'ai grandi ! Tu as bien pris soin moi on dirait.__"
+				+ "Maintenant que je suis sorti de mon oeuf, tu vas pouvoir faire plus de choses avec moi !"
+				+ "Je peux désormais être nourri, mais attention à ma santé..."
+				+ "Tu peux aussi jouer avec moi, ce qui me demandera peut-être un peu d'énergie, mais me rendra heureux."
+				+ "C'EST A TOI DE JOUER !\n";
 	}
 	
 

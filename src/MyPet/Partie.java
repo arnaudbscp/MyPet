@@ -4,12 +4,10 @@ import java.util.Scanner;
 public class Partie {
 	private Personnage pet;
 	private int compteurJours;
-	//private PetAfficheur petAfficheur;
 	
-	public Partie(String prenom /*, PetAfficheur petAfficheur*/) {
+	public Partie(String prenom) {
 		this.pet = new Oeuf(prenom);
-		this.compteurJours = 0;
-		//this.petAfficheur = petAfficheur;
+		compteurJours = 0;
 	}
 	
 	
@@ -43,18 +41,23 @@ public class Partie {
 
 
 	public void finDePartie() {
-		//petAfficheur.affichageFin();
-		//PetAfficheur.affichageDebut();
+		//Todo : Affichage de fin de partie
+		PetAfficheur.printPersonnage(pet);
 	}
 	
 	public int lireInstruction() {
-		Scanner sc = new Scanner(System.in);
-		String instruction = sc.nextLine();
-		return Integer.parseInt(instruction);
+		String input;
+		do {
+            System.out.print("Que voulez-vous faire ? ");
+			Scanner sc = new Scanner(System.in);
+			input = sc.nextLine();
+		}while (!isValid(input));
+		return Integer.parseInt(input);
 	}
 	
-	public boolean verifEntree(int instruct) {
-		return instruct >=1 && instruct <=6;
+	public boolean isValid(String input) {
+		return input.matches("[0-9][0-9]*")
+            && 0 < Integer.parseInt(input) && Integer.parseInt(input) < 7;
 	}
 	
 	public void evolution() { // modifier duree de vie du stade, diviser par deux le nb de jours (passe trop vite)

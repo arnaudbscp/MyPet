@@ -4,7 +4,17 @@ public class Adulte extends Personnage{
 	
 	public Adulte(String prenom) {
 	    super(prenom);
+	    this.setDureeDeVie(6);
+	    
+	    /* Initialisations des Paliers Adulte*/
+	  		this.maxBonheur=9;
+	  		this.maxEnergie=6;
+	  		this.maxFaim=6;
+	  		this.maxSante=6;
+
 	}    
+	
+	
 	
 	// avantage santé , -6 en energie, -4 en faim
 	@Override
@@ -50,6 +60,13 @@ public class Adulte extends Personnage{
 	    this.setEnergie(getEnergie()-3);
 	    this.setFaim(getFaim()-2);
 	    return 3;
+	}
+	
+	@Override
+	public String messageInit() {
+		return "__Tu m'as fait grandir encore, je suis un adulte maintenant.__"
+				+ "Jouons encore, occupe-toi de moi, j'ai toujours besoin de toi."
+				+ "A TOI !\n";
 	}
 	
 }
