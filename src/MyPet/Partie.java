@@ -46,17 +46,19 @@ public class Partie {
 	public int lireInstruction() {
 		String input;
 		do {
-			System.out.print("Que voulez-vous faire ? ");
-			@SuppressWarnings("resource")
+            System.out.print("Que voulez-vous faire ? ");
 			Scanner sc = new Scanner(System.in);
 			input = sc.nextLine();
-		}while (!isValid(input));
+		}while (!isDigit(input));
 		return Integer.parseInt(input);
-	} 
+	}
 
-	public boolean isValid(String input) {
-		return input.matches("[0-9][0-9]*")
-				&& 0 < Integer.parseInt(input) && Integer.parseInt(input) < 7;
+    private boolean isRightAct4RightPet(String input) {
+        return (!pet.toString().split(":")[0].equals("Oeuf")) ? 0 < Integer.parseInt(input) && Integer.parseInt(input) < 7 : 1 < Integer.parseInt(input) && Integer.parseInt(input) < 6;
+    }
+
+    private boolean isDigit(String input) {
+		return input.matches("[0-9][0-9]*") && isRightAct4RightPet(input);
 	}
 
 	public void evolution() {
