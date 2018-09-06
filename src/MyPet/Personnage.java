@@ -9,6 +9,13 @@ public abstract class Personnage {
 	private int tempo;
 	private int dureeDeVie;
 	
+	/* Declaration des variables des Paliers (personnage) */
+	int maxEnergie; 
+	int maxFaim; 
+	int maxSante; 
+	int maxBonheur; 
+	
+	
 	public int getDureeDeVie() {
 		return dureeDeVie;
 	}
@@ -72,6 +79,35 @@ public abstract class Personnage {
 		}else {
 			return false;
 		}
+	}
+	
+	/* Vérifie si un palier max ou min a été trangressé, le corige et renvoie 'false' si c'est le cas. Version pour les tests.*/
+	boolean verifiePalierBoolean() {
+		boolean validite = true;
+		/* Test si les valeurs dépassent le max et correction*/
+		if (this.faim>this.maxFaim) { this.faim=this.maxFaim;validite=false;}
+		if (this.sante>this.maxSante) { this.sante=this.maxSante;validite=false;}
+		if (this.energie>this.maxEnergie) { this.energie=this.maxEnergie;validite=false;}
+		if (this.bonheur>this.maxBonheur) { this.bonheur=this.maxBonheur;validite=false;}
+		/* Test si les valeurs sont sous le min et correction*/
+		if (this.faim<0) { this.faim=0;validite=false;}
+		if (this.sante<0) { this.sante=0;validite=false;}
+		if (this.energie<0) { this.energie=0;validite=false;}
+		if (this.bonheur<0) { this.bonheur=0;validite=false;}
+		return validite;
+	}
+	
+	void verifiePalier() {
+		/* Test si les valeurs dépassent le max et correction*/
+		if (this.getFaim()>this.maxFaim) { this.setFaim(this.maxFaim);}
+		if (this.getSante()>this.maxSante) { this.setSante(this.maxSante);}
+		if (this.getEnergie()>this.maxEnergie) { this.setEnergie(this.maxEnergie);}
+		if (this.getBonheur()>this.maxBonheur) { this.setBonheur(this.maxBonheur);}
+		/* Test si les valeurs sont sous le min et correction*/
+		if (this.getFaim()<0) { this.setFaim(0);}
+		if (this.getSante()<0) { this.setSante(0);}
+		if (this.getEnergie()<0) { this.setEnergie(0);}
+		if (this.getBonheur()<0) { this.setBonheur(0);}
 	}
 	
 	abstract int soigner();

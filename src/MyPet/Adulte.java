@@ -4,7 +4,16 @@ public class Adulte extends Personnage{
 	public Adulte(String prenom) {
 	    super(prenom);
 	    this.setDureeDeVie(6);
+	    
+	    /* Initialisations des Paliers Adulte*/
+	  		this.maxBonheur=9;
+	  		this.maxEnergie=6;
+	  		this.maxFaim=6;
+	  		this.maxSante=6;
+	    
 	}    
+	
+	
 	
 	// avantage santé , -6 en energie, -4 en faim
 	@Override

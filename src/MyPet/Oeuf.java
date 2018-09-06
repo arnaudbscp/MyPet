@@ -10,6 +10,13 @@ public class Oeuf extends Personnage {
 		this.setFaim(5);
 		this.setSante(5);
 		
+		/* Initialisations des Paliers Oeufs*/
+		this.maxBonheur=10;
+		this.maxEnergie=10;
+		this.maxFaim=10;
+		this.maxSante=10;
+
+		
 		// TODO Auto-generated constructor stub
 	}
 	
