@@ -6,6 +6,29 @@ import java.io.FileReader;
 import java.io.IOException;
 
 class PetAfficheur {
+    public static void printStart(){
+        String start = ".___  ___. ____    ____    .______    _______ .___________.\n" +
+                "|   \\/   | \\   \\  /   /    |   _  \\  |   ____||           |\n" +
+                "|  \\  /  |  \\   \\/   /     |  |_)  | |  |__   `---|  |----`\n" +
+                "|  |\\/|  |   \\_    _/      |   ___/  |   __|      |  |     \n" +
+                "|  |  |  |     |  |        |  |      |  |____     |  |     \n" +
+                "|__|  |__|     |__|        | _|      |_______|    |__|     \n" +
+                "\n---------------------- NEW GAME ------------------------------\n" ;
+        System.out.println(start);
+    }
+
+    public static void printDead(){
+        String dead = "        -|-\n" +
+                "         |\n" +
+                "     .-'~~~`-.\n" +
+                "   .'         `.\n" +
+                "   |  R  I  P  |\n" +
+                "   |           |\n" +
+                "   |           |\n" +
+                " \\\\|           |//\n" +
+                "^^^^^^^^^^^^^^^^^^^^\n" ;
+        System.out.println(dead);
+    }
     private static String readTxt(Personnage personnage, String resources){
         int niveauFaim = personnage.getFaim();
         int niveauEnergie = personnage.getEnergie();
@@ -44,22 +67,15 @@ class PetAfficheur {
                             values[1] = values[1].replace("jaugeSante", printStat(niveauSante, "+") + "   ");
                             break;
                     }
-                    if(!identite[0].equals("Oeuf")){
+                    if(identite[0].equals("Oeuf")){
                         int nbCar = "   +------------------- MENU ------------------+".length();
                         switch (idxLine){
-                            case 17:
-                                values[0] += "  |   1 : "+caractes[4]+String.format("%"+(nbCar - caractes[4].length() - 11)+"s","|");
+                            case 13:
+                                values[1] = "  |                                           |";
                                 break;
                             case 18:
-                                values[0] += "  |   5 : "+caractes[5]+String.format("%"+(nbCar - caractes[5].length() - 11)+"s","|");
+                                values[1] = "  |                                           |";
                                 break;
-                            case 19:
-                                values[0] += "  +-------------------------------------------+";
-                                break;
-                        }
-                    }else{
-                        if(idxLine == 17){
-                            values[0] += "  +-------------------------------------------+";
                         }
                     }
                     res += (values.length == 2) ? values[0] + values[1] + "\n" : values[0] + "\n";
