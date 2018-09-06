@@ -119,4 +119,5 @@ public class Partie {
 		} else { System.out.println("Haha je t'ai bien eu !\n");
 		}
 	}
+	
 }
