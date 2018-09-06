@@ -83,6 +83,11 @@ public abstract class Personnage {
 		}
 	}
 	
+	public void setCaract(Caractere c) {
+		this.caract=c;
+	}
+	
+	
 	/* Vérifie si un palier max ou min a été trangressé, le corige et renvoie 'false' si c'est le cas. Version pour les tests.*/
 	boolean verifiePalierBoolean() {
 		boolean validite = true;
