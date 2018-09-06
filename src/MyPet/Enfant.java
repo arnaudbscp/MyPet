@@ -54,7 +54,11 @@ public class Enfant extends Personnage {
 	
 	@Override
 	public String messageInit() {
-		return "";
+		return "__Hé, j'ai grandi ! Tu as bien pris soin moi on dirait.__"
+				+ "Maintenant que je suis sorti de mon oeuf, tu vas pouvoir faire plus de choses avec moi !"
+				+ "Je peux désormais être nourri, mais attention à ma santé..."
+				+ "Tu peux aussi jouer avec moi, ce qui me demandera peut-être un peu d'énergie, mais me rendra heureux."
+				+ "C'EST A TOI DE JOUER !\n";
 	}
 	
 
