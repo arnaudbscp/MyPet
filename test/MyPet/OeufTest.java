@@ -17,7 +17,7 @@ public class OeufTest {
         int s = perso.getSante();
         perso.soigner();
         assertEquals(b, perso.getBonheur()-2 );
-        assertEquals(s, perso.getSante() - 1);
+        assertEquals(s, perso.getSante()-2);
     }
 
     @org.junit.Test

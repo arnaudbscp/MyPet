@@ -41,12 +41,17 @@ public class Partie {
 	}
 	
 	public int lireInstruction() {
-		Scanner sc = new Scanner(System.in);
-		String instruction = sc.nextLine();
-		return Integer.parseInt(instruction);
+		String input;
+		do {
+            System.out.print("Que voulez-vous faire ? ");
+			Scanner sc = new Scanner(System.in);
+			input = sc.nextLine();
+		}while (!isValid(input));
+		return Integer.parseInt(input);
 	}
 	
-	public boolean verifEntree(int instruct) {
-		return instruct >=1 && instruct <=6;
+	public boolean isValid(String input) {
+		return input.matches("[0-9][0-9]*")
+            && 0 < Integer.parseInt(input) && Integer.parseInt(input) < 7;
 	}
 }

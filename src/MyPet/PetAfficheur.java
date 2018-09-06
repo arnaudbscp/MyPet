@@ -7,16 +7,43 @@ import java.io.IOException;
 
 class PetAfficheur {
     private static String readTxt(Personnage personnage, String resources){
+        int niveauFaim = personnage.getFaim();
+        int niveauEnergie = personnage.getEnergie();
+        int niveauSante = personnage.getSante();
+        int niveauBonheur = personnage.getBonheur();
+
         String res = "";
         try {
             BufferedReader brStat = new BufferedReader(new FileReader(resources));
             try {
                 String line = brStat.readLine();
-                int i = 0;
+                int idxLine = 1;
                 while(line != null){
-                    res += line + "\n";
+                    String[] values = line.split(";");
+                    switch (idxLine){
+                        case 4:
+                            values[1] = values[1].replace("pet.nom", personnage.getPrenom());
+                            break;
+                        case 6:
+                            values[1] = values[1].replace("faim", String.valueOf(niveauFaim));
+                            values[1] = values[1].replace("jaugeFaim", printStat(niveauFaim, "☕") + "   ");
+                            break;
+                        case 7:
+                            values[1] = values[1].replace("energie", String.valueOf(niveauEnergie));
+                            values[1] = values[1].replace("jaugeEnergie", printStat(niveauEnergie, "⚡") + "   ");
+                            break;
+                        case 8:
+                            values[1] = values[1].replace("bonheur", String.valueOf(niveauBonheur));
+                            values[1] = values[1].replace("jaugeBonheur", printStat(niveauBonheur, "\uD83D\uDE00") + "   ");
+                            break;
+                        case 9:
+                            values[1] = values[1].replace("sante", String.valueOf(niveauSante));
+                            values[1] = values[1].replace("jaugeSante", printStat(niveauSante, "❤") + "   ");
+                            break;
+                    }
+                    res += (values.length == 2) ? values[0] + values[1] + "\n" : values[0] + "\n";
                     line = brStat.readLine();
-                    i++;
+                    idxLine++;
                 }
                 brStat.close();
             } catch (IOException e) {
@@ -29,24 +56,7 @@ class PetAfficheur {
     }
 
     public static void printPersonnage(Personnage personnage){
-        int niveauFaim = personnage.getFaim();
-        int niveauEnergie = personnage.getEnergie();
-        int niveauSante = personnage.getSante();
-        int niveauBonheur = personnage.getBonheur();
-
-        String perso = "";
-        perso += "           ";
-        perso += "Faim: ["+niveauFaim+"]"+printStat(niveauFaim, "☕") + "   ";
-        perso += "Energie: ["+niveauEnergie+"]"+printStat(niveauEnergie, "⚡") + "   ";
-        perso += "Bonheur: ["+niveauBonheur+"]"+printStat(niveauBonheur, "\uD83D\uDE00") + "   ";
-        perso += "Santé: ["+niveauSante+"]"+printStat(niveauSante, "❤") + "   ";
-        perso += "\n";
-
-        perso += readTxt(personnage, "resources/PersonnageOeuf.txt");
-        perso += "\n+========================================= Menu =========================================+\n";
-        perso += "|  [1]: Manger - [2]: Dormir - [3]: Soigner - [4]: Carresser - [5]: Jouer - [6]: Laver   |";
-        perso += "\n+========================================================================================+\n";
-        System.out.println(perso);
+        System.out.println(readTxt(personnage, "resources/Oeuf.txt"));
     }
 
     private static String printStat(int niveau, String s) {
