@@ -67,5 +67,8 @@ public class Adulte extends Personnage{
 				+ "Jouons encore, occupe-toi de moi, j'ai toujours besoin de toi."
 				+ "A TOI !\n";
 	}
-	
+	@Override
+	public String toString() {
+		return "Adulte:MANGER|DORMIR|SE SOIGNER|CARESSER|JOUER|LAVER";
+	}
 }

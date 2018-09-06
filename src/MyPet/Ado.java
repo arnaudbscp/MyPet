@@ -65,5 +65,9 @@ public class Ado extends Personnage {
 				+ "Mais j'ai confiance en toi, je sais que tu vas t'en sortir avec moi !"
 				+ "C'EST A TOI !\n";
 	}
-    
+
+    @Override
+    public String toString() {
+        return "Ado:MANGER|DORMIR|SE SOIGNER|CARESSER|JOUER|LAVER";
+    }
 }

@@ -66,6 +66,9 @@ public class Enfant extends Personnage {
 				+ "Tu peux aussi jouer avec moi, ce qui me demandera peut-être un peu d'énergie, mais me rendra heureux."
 				+ "C'EST A TOI DE JOUER !\n";
 	}
-	
 
+	@Override
+	public String toString() {
+		return "Enfant:MANGER|DORMIR|SE SOIGNER|CARESSER|JOUER|LAVER";
+	}
 }
