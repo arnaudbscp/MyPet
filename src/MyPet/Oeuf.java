@@ -56,13 +56,13 @@ public class Oeuf extends Personnage {
 
 	@Override
 	public int mangerBoire() {
-		// TODO Auto-generated method stub
+		System.out.println("Un oeuf ne peut pas manger voyons ! Choisis une autre option !");
 		return 0;
 	}
 
 	@Override
 	public int jouer() {
-		// TODO Auto-generated method stub
+		System.out.println("Ne fais pas ça ! Tu va le casser ! Essaie une autre option.");
 		return 0;
 	}
 	
