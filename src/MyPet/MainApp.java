@@ -109,7 +109,7 @@ public class MainApp {
 		else {
 			piece = random.nextInt(100); 
 			if(piece < 40) return true;
-			return false;
+			return false; 
 		}
 	}
 }
