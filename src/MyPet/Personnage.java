@@ -122,30 +122,30 @@ public abstract class Personnage {
 		if (this.getBonheur()<0) { this.setBonheur(0);}
 	}
 	
-	void effetCaractere() {
-		switch(this.caract) {
+	void effetCaractere(Personnage perso) {
+		switch(perso.caract) {
 		
-		case Joyeux : this.setBonheur(this.getBonheur()+1);
+		case Joyeux : perso.setBonheur(perso.getBonheur()+1);
 		System.out.println("Il a l'air d'être joyeux de nature...");
 			break;
 			
-		case Feneant : this.setEnergie(this.getEnergie()-1);
+		case Feneant : perso.setEnergie(perso.getEnergie()-1);
 		System.out.println("Il a l'air d'être fainéant de nature...");
 			break;
 			
-		case Triste : this.setBonheur(this.getBonheur()-1);
+		case Triste : perso.setBonheur(perso.getBonheur()-1);
 		System.out.println("Il a l'air d'être triste de nature...");
 			break;
 			
-		case Maladif : this.setSante(this.getSante()-1);
+		case Maladif : perso.setSante(perso.getSante()-1);
 		System.out.println("Il a l'air d'être malade...");
 			break;
 			
-		case Affame : this.setFaim(this.getFaim()-1);
+		case Affame : perso.setFaim(perso.getFaim()-1);
 		System.out.println("Il a l'air d'avoir faim...");
 			break;
 			
-		case Rassasie : this.setFaim(this.getFaim()+1);
+		case Rassasie : perso.setFaim(perso.getFaim()+1);
 		System.out.println("Il a l'air d'avoir trop mangé...");
 			break;
 			

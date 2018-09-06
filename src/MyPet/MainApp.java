@@ -1,5 +1,7 @@
 package MyPet;
 
+import java.util.Random;
+
 public class MainApp {
 
 	public static void main(String[] args) {
@@ -31,15 +33,23 @@ public class MainApp {
 			int choix  = partie.lireInstruction();
 			switch(choix) {
 				case 1:
-					tempo += perso.mangerBoire();
-					if(e.seProduit()) {
+					if(perso.getCaract() == Caractere.Rassasie && hasard()) {
+						System.out.println("Il ne veut pas de nourriture.");
+					}else {
+						tempo += perso.mangerBoire();
+						if(e.seProduit()) {
 						e.estMalade();
+						}
 					}
 					break;
 				case 2:
-					tempo += perso.dormir();
-					if(e.seProduit()) {
-						e.peurDuNoir();
+					if(perso.getCaract() == Caractere.Joyeux && hasard()) {
+						System.out.println("Il n'est pas d'humeur à dormir, il veut s'amuser.");
+					}else {
+						tempo += perso.dormir();
+						if(e.seProduit()) {
+							e.peurDuNoir();
+						}
 					}
 					break;
 				case 3:
@@ -52,7 +62,11 @@ public class MainApp {
 					tempo += perso.caresser();
 					break;
 				case 5:
-					tempo += perso.jouer();
+					if(perso.getCaract() == Caractere.Feneant && hasard()) {
+						System.out.println("Il n'est pas d'humeur à jouer.");
+					}else {
+						tempo += perso.jouer();
+					}
 					break;
 				case 6:
 					tempo += perso.laver();
@@ -60,13 +74,12 @@ public class MainApp {
 				default:
 					System.out.println("Instruction incorrecte.");
 				}
-			perso.effetCaractere();
+			perso.effetCaractere(perso);
 			perso.verifiePalier();
 			perso.setTempo(tempo);
 			
 			if(partie.testJourneeEcoulee());
 			
-			System.out.println("Tempo " + perso.getTempo());
 			System.out.println("Jour numéro " + partie.getCompteurJours());
 			
 			partie.evolution();
@@ -80,4 +93,11 @@ public class MainApp {
 
 	}
 
+	public static boolean hasard() {
+		Random random = new Random();
+		int piece = 0;
+		piece = random.nextInt(100); // 1/3 de chance
+		if(piece < 11) return true;
+		return false;
+	}
 }

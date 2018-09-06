@@ -29,4 +29,5 @@ public enum Caractere {
 	public void setCaractere(String caractere) {
 		this.caractere = caractere;
 	}
+	
 }
