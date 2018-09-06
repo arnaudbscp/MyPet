@@ -68,6 +68,6 @@ public class Ado extends Personnage {
 
     @Override
     public String toString() {
-        return "Ado:MANGER|DORMIR|SE SOIGNER|CARESSER|JOUER|LAVER";
+        return "Ado:"+super.toString()+";MANGER;JOUER";
     }
 }

@@ -67,6 +67,6 @@ public class Adulte extends Personnage{
 	}
 	@Override
 	public String toString() {
-		return "Adulte:MANGER|DORMIR|SE SOIGNER|CARESSER|JOUER|LAVER";
+		return "Adulte:"+super.toString()+";MANGER;JOUER";
 	}
 }

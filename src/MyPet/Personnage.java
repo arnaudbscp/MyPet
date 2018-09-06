@@ -149,6 +149,6 @@ public abstract class Personnage {
 	
 	@Override
 	public String toString() {
-		return "";
+		return "DORMIR;SOIGNER;CARESSER;LAVER";
 	}
 }

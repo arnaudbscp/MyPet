@@ -70,6 +70,6 @@ public class Enfant extends Personnage {
 
 	@Override
 	public String toString() {
-		return "Enfant:MANGER|DORMIR|SE SOIGNER|CARESSER|JOUER|LAVER";
+		return "Enfant:"+super.toString()+";MANGER;JOUER";
 	}
 }
