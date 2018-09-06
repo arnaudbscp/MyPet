@@ -11,9 +11,9 @@ public class main {
 		Personnage perso = partie.getPet();
 		PetAfficheur.printPersonnage(perso);
 		
-		while(!partie.verifEntree(instruc)) {
+		while(!perso.estMort()) {
 			
-			System.out.println("Que voulez-vous faire ?\n");
+			
 			instruc = partie.lireInstruction();
 			
 			switch(instruc) {

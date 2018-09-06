@@ -41,9 +41,16 @@ public class Partie {
 	}
 	
 	public int lireInstruction() {
-		Scanner sc = new Scanner(System.in);
-		String instruction = sc.nextLine();
-		return Integer.parseInt(instruction);
+		int input;
+		do {
+			System.out.println("Que voulez-vous faire ?\n");
+			Scanner sc = new Scanner(System.in);
+			String instruction = sc.nextLine();
+			input = Integer.parseInt(instruction);
+		}
+		while(!verifEntree(input));
+		
+		return input;
 	}
 	
 	public boolean verifEntree(int instruct) {
