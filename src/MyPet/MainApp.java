@@ -6,8 +6,9 @@ import java.util.Scanner;
 public class MainApp {
 
 	public static void main(String[] args) {
+		PetAfficheur.printStart();
 		String nom;
-		System.out.println("Comment voulez-vous appeler votre Pet ?");
+		System.out.print("         Comment voulez-vous appeler votre Pet ?");
 		Scanner sc = new Scanner(System.in);
 		nom = sc.nextLine();
 		Partie partie = new Partie(nom);
@@ -89,8 +90,8 @@ public class MainApp {
 			}
 		}
 		
-		PetAfficheur.printPersonnage(perso);
-		System.out.println("Il est mort prématurément, le pauvre.");
+		PetAfficheur.printDead();
+		System.out.println("Votre Pet a survecu"+ partie.getCompteurJours()+ " jours,le pauvre.");
 	}
 
 	public static boolean hasard() {
