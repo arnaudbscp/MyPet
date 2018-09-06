@@ -34,3 +34,4 @@ public class Magicien {
 		return rand.nextInt(2);
 	}
 }
+
