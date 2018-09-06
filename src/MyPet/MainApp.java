@@ -6,6 +6,7 @@ public class MainApp {
 		Partie partie = new Partie("Caliméro");
 
 		Personnage perso = partie.getPet();
+        System.out.println(perso.messageInit());
 		
 		while(!perso.estMort()) {
 			PetAfficheur.printPersonnage(perso);

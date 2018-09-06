@@ -76,6 +76,4 @@ public class Oeuf extends Personnage {
 				+ "Tu peux aussi me faire 'dormir', si je te parais fatigué..."
 						+ "A TOI DE JOUER !";
 	}
-	
-
 }
