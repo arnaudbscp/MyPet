@@ -1,15 +1,17 @@
 package MyPet;
 import java.util.Scanner;
 
+import Bonus.Chifumi;
+
 public class Partie {
 	private Personnage pet;
 	private int compteurJours;
-	
+
 	public Partie(String prenom) {
 		this.pet = new Oeuf(prenom);
 		compteurJours = 0;
 	}
-	
+
 	public Personnage getPet() {
 		return pet;
 	}
@@ -21,7 +23,7 @@ public class Partie {
 	public void journeeEcoulee() {
 		compteurJours = compteurJours + 1;
 	}
-	
+
 	public boolean testJourneeEcoulee() {
 		if(pet.getTempo()>=12) {
 			journeeEcoulee();
@@ -30,7 +32,7 @@ public class Partie {
 		}
 		return false;
 	}
-	
+
 	public int getCompteurJours() {
 		return compteurJours;
 	}
@@ -40,7 +42,7 @@ public class Partie {
 		//Todo : Affichage de fin de partie
 		PetAfficheur.printPersonnage(pet);
 	}
-	
+
 	public int lireInstruction() {
 		String input;
 		do {
@@ -58,7 +60,7 @@ public class Partie {
     private boolean isDigit(String input) {
 		return input.matches("[0-9][0-9]*") && isRightAct4RightPet(input);
 	}
-	
+
 	public void evolution() {
 		if(getPet().getDureeDeVie() == compteurJours) {
 			if(getPet().getClass().getName() == "MyPet.Oeuf") {
@@ -68,11 +70,12 @@ public class Partie {
 				e.setFaim(getPet().getFaim());
 				e.setSante(getPet().getSante());
 				e.verifiePalier();
+				e.setCaract(Caractere.getRandomCar());
 				setPet(e);
 				getPet().setDureeDeVie(4);
 				System.out.println("ATTENTION!!! Il évolue ! On dirait qu'il a éclos !");
 			}
-			
+
 			else if(getPet().getClass().getName() == "MyPet.Enfant") {
 				Ado a = new Ado(getPet().getPrenom());
 				a.setBonheur(getPet().getBonheur());
@@ -80,11 +83,12 @@ public class Partie {
 				a.setFaim(getPet().getFaim());
 				a.setSante(getPet().getSante());
 				a.verifiePalier();
+				a.setCaract(Caractere.getRandomCar());
 				setPet(a);
 				getPet().setDureeDeVie(7);
 				System.out.println("ATTENTION!!! Il évolue encore! C'est un ado maintenant.");
 			}
-			
+
 			else if(getPet().getClass().getName() == "MyPet.Ado") {
 				Adulte ad = new Adulte(getPet().getPrenom());
 				ad.setBonheur(getPet().getBonheur());
@@ -92,15 +96,25 @@ public class Partie {
 				ad.setFaim(getPet().getFaim());
 				ad.setSante(getPet().getSante());
 				ad.verifiePalier();
+				ad.setCaract(Caractere.getRandomCar());
 				setPet(ad);
 				getPet().setDureeDeVie(13);
 				System.out.println("ATTENTION!!! Il évolue une dernière fois! Il est très grand.");
 			}
-			
+
 			else {
 				System.out.println("Il est mort de vieillesse, bravo !");
 				getPet().setSante(0);
 			}
 		}
 	}
+	
+	public void chifumi() {
+		Chifumi chif = new Chifumi();
+		if (chif.combat(chif.saisie())) {
+			System.out.println("Haha tu as gagné !");
+		} else { System.out.println("Haha pas de chance !");
+		}
+	}
+
 }

@@ -56,19 +56,17 @@ public class Oeuf extends Personnage {
 
 	@Override
 	public int mangerBoire() {
-		System.out.println("Un oeuf ne peut pas manger voyons ! Choisis une autre option !");
 		return 0;
 	}
 
 	@Override
 	public int jouer() {
-		System.out.println("Ne fais pas ça ! Tu va le casser ! Essaie une autre option.");
 		return 0;
 	}
 	
 	@Override
 	public String messageInit() {
-		return "__Bonjour, je suis un oeuf. Si tu t'occupes de moi, je pourrais bien devenir quelque chose d'autre... =^o^=__\n"
+		return "  Coucou, je suis un oeuf. Si tu t'occupes de moi, je pourrais bien evoluer, comme un pokemon... =^o^=__\n"
 				+ "Tu peux me caresser, ça me rendrait sûrement plus heureux...\n"
 				+ "Tu peux me soigner, si tu trouves que je n'ai pas l'air très en forme...\n"
 				+ "Tu peux me laver, si j'ai une tâche sur le nez...\n"
