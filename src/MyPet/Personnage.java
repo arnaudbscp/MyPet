@@ -26,8 +26,7 @@ public abstract class Personnage {
 
 	public Personnage(String prenom) {
 		this.prenom = prenom;
-		this.tempo = 0;
-		dureeDeVie = 2;
+		dureeDeVie = 1;
 	}
 
 	public int getTempo() {

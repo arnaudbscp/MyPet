@@ -13,9 +13,6 @@ public class Adulte extends Personnage{
 	  		this.maxSante=6;
 
 	}    
-	
-	
-	
 	// avantage santé , -6 en energie, -4 en faim
 	@Override
 	public int soigner() {

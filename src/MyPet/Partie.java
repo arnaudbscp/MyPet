@@ -10,26 +10,22 @@ public class Partie {
 		compteurJours = 0;
 	}
 	
-	
 	public Personnage getPet() {
 		return pet;
 	}
-
-
 
 	public void setPet(Personnage pet) {
 		this.pet = pet;
 	}
 
-
-
 	public void journeeEcoulee() {
-		this.compteurJours ++;
+		compteurJours = compteurJours + 1;
 	}
 	
 	public boolean testJourneeEcoulee() {
-		if(pet.getTempo()%12 == 0) {
-			this.journeeEcoulee();
+		if(pet.getTempo()>=12) {
+			journeeEcoulee();
+			pet.setTempo(0);
 			return true;
 		}
 		return false;
@@ -49,6 +45,7 @@ public class Partie {
 		String input;
 		do {
             System.out.print("Que voulez-vous faire ? ");
+			@SuppressWarnings("resource")
 			Scanner sc = new Scanner(System.in);
 			input = sc.nextLine();
 		}while (!isValid(input));
@@ -61,28 +58,46 @@ public class Partie {
 	}
 	
 	public void evolution() { // modifier duree de vie du stade, diviser par deux le nb de jours (passe trop vite)
-		System.out.println("a");
 		if(getPet().getDureeDeVie() == compteurJours) {
-			System.out.println("a");
 			if(getPet().getClass().getName() == "MyPet.Oeuf") {
 				Enfant e = new Enfant(getPet().getPrenom());
+				e.setBonheur(getPet().getBonheur());
+				e.setEnergie(getPet().getEnergie());
+				e.setFaim(getPet().getFaim());
+				e.setSante(getPet().getSante());
+				e.verifiePalier();
 				setPet(e);
-				getPet().setDureeDeVie(12);
-				System.out.println("ATTENTION!!! Il évolue !");
-			}else if(getPet().getClass().getName() == "MyPet.Enfant") {
-				Ado a = new Ado(getPet().getPrenom());
-				setPet(a);
-				getPet().setDureeDeVie(12);
-				System.out.println("ATTENTION!!! Il évolue encore!");
-			}else if(getPet().getClass().getName() == "MyPet.Ado") {
-				Adulte ad = new Adulte(getPet().getPrenom());
-				setPet(ad);
-				getPet().setDureeDeVie(12);
-				System.out.println("ATTENTION!!! Il évolue une dernière fois!");
+				getPet().setDureeDeVie(4);
+				System.out.println("ATTENTION!!! Il évolue ! On dirait qu'il a éclos !");
 			}
+			
+			else if(getPet().getClass().getName() == "MyPet.Enfant") {
+				Ado a = new Ado(getPet().getPrenom());
+				a.setBonheur(getPet().getBonheur());
+				a.setEnergie(getPet().getEnergie());
+				a.setFaim(getPet().getFaim());
+				a.setSante(getPet().getSante());
+				a.verifiePalier();
+				setPet(a);
+				getPet().setDureeDeVie(7);
+				System.out.println("ATTENTION!!! Il évolue encore! C'est un ado maintenant.");
+			}
+			
+			else if(getPet().getClass().getName() == "MyPet.Ado") {
+				Adulte ad = new Adulte(getPet().getPrenom());
+				ad.setBonheur(getPet().getBonheur());
+				ad.setEnergie(getPet().getEnergie());
+				ad.setFaim(getPet().getFaim());
+				ad.setSante(getPet().getSante());
+				ad.verifiePalier();
+				setPet(ad);
+				getPet().setDureeDeVie(13);
+				System.out.println("ATTENTION!!! Il évolue une dernière fois! Il est très grand.");
+			}
+			
 			else {
-				getPet().setSante(0);
 				System.out.println("Il est mort de vieillesse, bravo !");
+				getPet().setSante(0);
 			}
 		}
 	}
