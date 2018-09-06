@@ -50,7 +50,7 @@ public class Partie {
 			input = sc.nextLine();
 		}while (!isValid(input));
 		return Integer.parseInt(input);
-	}
+	} 
 	
 	public boolean isValid(String input) {
 		return input.matches("[0-9][0-9]*")
