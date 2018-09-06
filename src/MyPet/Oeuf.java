@@ -56,13 +56,11 @@ public class Oeuf extends Personnage {
 
 	@Override
 	public int mangerBoire() {
-		System.out.println("Un oeuf ne peut pas manger voyons ! Choisis une autre option !");
 		return 0;
 	}
 
 	@Override
 	public int jouer() {
-		System.out.println("Ne fais pas ça ! Tu va le casser ! Essaie une autre option.");
 		return 0;
 	}
 	
