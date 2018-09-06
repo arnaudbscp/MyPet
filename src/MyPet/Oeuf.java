@@ -78,6 +78,6 @@ public class Oeuf extends Personnage {
 
 	@Override
 	public String toString() {
-		return "Oeuf:MANGER|DORMIR|SE SOIGNER|CARESSER|JOUER|LAVER";
+		return "Oeuf:"+super.toString();
 	}
 }
