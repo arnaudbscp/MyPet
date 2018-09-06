@@ -2,6 +2,7 @@ package MyPet;
 import java.util.Scanner;
 
 import Bonus.Chifumi;
+import Bonus.Magicien;
 
 public class Partie {
 	private Personnage pet;
@@ -106,13 +107,20 @@ public class Partie {
 			}
 		}
 	}
-	
+
 	public void chifumi() {
 		Chifumi chif = new Chifumi();
 		if (chif.combat(chif.saisie())) {
-			System.out.println("Haha tu as gagné !");
-		} else { System.out.println("Haha pas de chance !");
+			System.out.println("Haha tu as gagné !\n");
+		} else { System.out.println("Haha pas de chance !\n");
 		}
 	}
 
+	public void gobelet() {
+		Magicien elMagus = new Magicien();
+		if (elMagus.devinette(elMagus.saisie())){
+			System.out.println("Wouah comment tu as fait !?\n");
+		} else { System.out.println("Haha je t'ai bien eu !\n");
+		}
+	}
 }
