@@ -47,7 +47,7 @@ public class MainApp {
 		}
 		
 		PetAfficheur.printPersonnage(perso);
-		
+
 		if(perso.estMort()) {
 			System.out.println("Il est mort prématurément, le pauvre.");
 		}

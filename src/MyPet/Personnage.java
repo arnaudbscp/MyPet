@@ -27,6 +27,7 @@ public abstract class Personnage {
 	public Personnage(String prenom) {
 		this.prenom = prenom;
 		dureeDeVie = 1;
+		this.tempo = 0;
 	}
 
 	public int getTempo() {
@@ -122,5 +123,9 @@ public abstract class Personnage {
 		if(jaugeVide(this.sante) || jaugeVide(this.faim) || (tempo/12)==13) return true;
 		return false;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "";
+	}
 }

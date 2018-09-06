@@ -61,9 +61,13 @@ public class Ado extends Personnage {
     
     @Override
 	public String messageInit() {
-		return "__Me voici à l'âge ingrat... Je risque d'être plus facilement de mauvaise humeur et d'avoir faim, très faim !__"
-				+ "Mais j'ai confiance en toi, je sais que tu vas t'en sortir avec moi !"
+		return "__Me voici à l'âge ingrat... Je risque d'être plus facilement de mauvaise humeur et d'avoir faim, très faim !__\n"
+				+ "Mais j'ai confiance en toi, je sais que tu vas t'en sortir avec moi !\n"
 				+ "C'EST A TOI !\n";
 	}
-    
+
+    @Override
+    public String toString() {
+        return "Ado:MANGER|DORMIR|SE SOIGNER|CARESSER|JOUER|LAVER";
+    }
 }

@@ -21,10 +21,11 @@ Notre affichage est plutôt correct mais nécessite des améliorations
 
 ### Quelle décision prenons nous suite à cette expérience ?
 
-Push rapidement après une modif de manière à limiter les conflits 
+Push rapidement après une modif de manière à limiter les conflits
+Travailler en binôme quand on agit sur les mêmes classes 
 
 ### Qu'allons nous tester durant les deux prochaines heures ??
-L'implémentation d'évènement aléatoires dans les différentes actions possibles sur notre pet
+Finalisation de l'affichage, des menus, des animations et des évolutions
 
 
 ### A quoi verra-t-on que cela a fonctionné ??
