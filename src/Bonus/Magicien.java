@@ -10,6 +10,10 @@ public class Magicien {
 	public Magicien() {
 		leMagicienne=Gobelets.getRandomGobelet();
 	}
+	
+	public Gobelets getMagicien() {
+		return leMagicienne;
+	}
 
 	public boolean devinette(int choix) {
 		return choix==leMagicienne.getPosition();

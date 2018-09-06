@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 import Bonus.Chifumi;
 import Bonus.Magicien;
+import Bonus.Signes;
 
 public class Partie {
 	private Personnage pet;
@@ -107,8 +108,8 @@ public class Partie {
 	public void chifumi() {
 		Chifumi chif = new Chifumi();
 		if (chif.combat(chif.saisie())) {
-			System.out.println("Haha tu as gagné !\n");
-		} else { System.out.println("Haha pas de chance !\n");
+			System.out.println("Haha tu as gagné ! Tu as battu mon signe : " + Signes.getSigneAvecInt(chif.getiA()) + "\n");
+		} else { System.out.println("Haha pas de chance ! Je t'ai battu avec mon signe :"+ Signes.getSigneAvecInt(chif.getiA()) + "\n");
 		}
 	}
 

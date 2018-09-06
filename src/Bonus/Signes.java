@@ -16,6 +16,13 @@ public enum Signes {
 		return signe;
 	}
 	
+	public static String getSigneAvecInt(int i) {
+		if (i==0) return "pierre";
+		if (i==1) return "papier";
+		if (i==2) return "ciseau";
+		return "";
+	}
+	
 	Signes (String s, int num){
 		signe = s;
 		numero = num;

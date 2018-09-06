@@ -18,6 +18,10 @@ public class Chifumi {
 		return false;
 	}
 	
+	public int getiA() {
+		return iA;
+	}
+	
 	public int saisie() {
 		Scanner sc = new Scanner(System.in);
 		Random rand = new Random();
