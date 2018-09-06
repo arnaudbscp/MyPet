@@ -16,8 +16,8 @@ public class OeufTest {
         int b = perso.getBonheur();
         int s = perso.getSante();
         perso.soigner();
-        assertEquals(b, perso.getBonheur()-2 );
-        assertEquals(s, perso.getSante()-2);
+        assertEquals(b-2, perso.getBonheur());
+        assertEquals(s+2, perso.getSante());
     }
 
     @org.junit.Test
@@ -26,9 +26,9 @@ public class OeufTest {
         int b = perso.getBonheur();
         int s = perso.getSante();
         perso.dormir();
-        assertEquals(e, e + 2);
-        assertEquals(b, b - 1);
-        assertEquals(s, s - 1);
+        assertEquals(e+2, perso.getEnergie());
+        assertEquals(b-1, perso.getBonheur());
+        assertEquals(s-1, perso.getSante());
     }
 
     @org.junit.Test
@@ -37,9 +37,9 @@ public class OeufTest {
         int b = perso.getBonheur();
         int s = perso.getSante();
         perso.laver();
-        assertEquals(e, e - 1);
-        assertEquals(b, b + 1);
-        assertEquals(s, s + 1);
+        assertEquals(e - 1, perso.getEnergie());
+        assertEquals(b + 1, perso.getBonheur());
+        assertEquals(s + 1, perso.getSante());
     }
 
     @org.junit.Test
@@ -47,8 +47,8 @@ public class OeufTest {
         int e = perso.getEnergie();
         int b = perso.getBonheur();
         perso.caresser();
-        assertEquals(e, e + 2);
-        assertEquals(b, b + 1);
+        assertEquals(e + 1, perso.getEnergie());
+        assertEquals(b + 2, perso.getBonheur());
     }
 
     @org.junit.Test
@@ -57,9 +57,9 @@ public class OeufTest {
         int b = perso.getBonheur();
         int s = perso.getSante();
         perso.mangerBoire();
-        assertEquals(e, e + 2);
-        assertEquals(b, b - 1);
-        assertEquals(s, s - 1);
+        assertEquals(e, perso.getEnergie());
+        assertEquals(b, perso.getBonheur());
+        assertEquals(s, perso.getSante());
     }
 
     @org.junit.Test
