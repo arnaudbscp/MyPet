@@ -3,6 +3,8 @@ package MyPet;
 import java.util.Random;
 import java.util.Scanner;
 
+import Bonus.Chifumi;
+
 public class MainApp {
 
 	public static void main(String[] args) {
@@ -36,7 +38,7 @@ public class MainApp {
 				int choix  = partie.lireInstruction();
 				switch(choix) {
 					case 1:
-						if(perso.getCaract() == Caractere.Rassasie && hasard()) {
+						if(perso.getCaract() == Caractere.Rassasie && hasard(1)) {
 							System.out.println("Il ne veut pas de nourriture.");
 						}else {
 							tempo += perso.mangerBoire();
@@ -46,7 +48,7 @@ public class MainApp {
 						}
 						break;
 					case 2:
-						if(perso.getCaract() == Caractere.Joyeux && hasard()) {
+						if(perso.getCaract() == Caractere.Joyeux && hasard(1)) {
 							System.out.println("Il n'est pas d'humeur à dormir, il veut s'amuser.");
 						}else {
 							tempo += perso.dormir();
@@ -65,8 +67,11 @@ public class MainApp {
 						tempo += perso.caresser();
 						break;
 					case 5:
-						if(perso.getCaract() == Caractere.Feneant && hasard()) {
+						if(perso.getCaract() == Caractere.Feneant && hasard(1)) {
 							System.out.println("Il n'est pas d'humeur à jouer.");
+						}else if(hasard(2)){
+							partie.chifumi();
+							tempo += perso.jouer();
 						}else {
 							tempo += perso.jouer();
 						}
@@ -93,11 +98,18 @@ public class MainApp {
 		System.out.println("Il est mort prématurément, le pauvre.");
 	}
 
-	public static boolean hasard() {
+	public static boolean hasard(int num) {
 		Random random = new Random();
 		int piece = 0;
-		piece = random.nextInt(100); // 1/3 de chance
-		if(piece < 11) return true;
-		return false;
+		if(num == 1) {
+			piece = random.nextInt(100); 
+			if(piece < 11) return true;
+			return false;
+		}
+		else {
+			piece = random.nextInt(100); 
+			if(piece < 40) return true;
+			return false;
+		}
 	}
 }
