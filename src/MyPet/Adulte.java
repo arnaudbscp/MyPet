@@ -61,7 +61,7 @@ public class Adulte extends Personnage{
 	
 	@Override
 	public String messageInit() {
-		return "__Tu m'as fait grandir encore, je suis un adulte maintenant.__\n"
+		return " Tu m'as fait encore grandir, je suis un adulte maintenant.\n"
 				+ "Jouons encore, occupe-toi de moi, j'ai toujours besoin de toi.\n"
 				+ "A TOI !\n";
 	}
