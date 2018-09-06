@@ -1,6 +1,7 @@
 package MyPet;
 
-public class Adulte extends Personnage{    
+public class Adulte extends Personnage{
+	
 	public Adulte(String prenom) {
 	    super(prenom);
 	    this.setDureeDeVie(6);
@@ -10,7 +11,7 @@ public class Adulte extends Personnage{
 	  		this.maxEnergie=6;
 	  		this.maxFaim=6;
 	  		this.maxSante=6;
-	    
+
 	}    
 	
 	
