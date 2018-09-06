@@ -132,7 +132,7 @@ public abstract class Personnage {
 		case Maladif : this.setSante(this.getSante()-1);
 			break;
 			
-		case Afame : this.setFaim(this.getFaim()-1);
+		case Affame : this.setFaim(this.getFaim()-1);
 			break;
 			
 		case Rassasie : this.setFaim(this.getFaim()+1);
