@@ -11,7 +11,7 @@ public class Chifumi {
 	}
 	
 	public boolean combat(int input) {
-		if (input==iA) /*rejouer*/ ;
+		if (input==iA) return combat(saisie());
 		if (input==0) return iA==2;
 		if (input==1) return iA==0;
 		if (input==2) return iA==1;
