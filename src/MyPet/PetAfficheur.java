@@ -48,7 +48,7 @@ class PetAfficheur {
                     int indice = 1;
                     switch (idxLine){
                         case 4:
-                            values[1] = values[1].replace("pet.nom", personnage.getPrenom());
+                            values[1] = values[1].replace("pet.nom", personnage.getPrenom().toUpperCase());
                             break;
                         case 6:
                             values[1] = values[1].replace("faim", String.valueOf(niveauFaim));
