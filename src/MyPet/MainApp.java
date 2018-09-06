@@ -32,6 +32,7 @@ public class MainApp {
 				default:
 					System.out.println("Instruction incorrecte.");
 				}
+			perso.verifiePalier();
 		}
 		
 		PetAfficheur.printPersonnage(perso);
