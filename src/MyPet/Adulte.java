@@ -52,4 +52,9 @@ public class Adulte extends Personnage{
 	    return 3;
 	}
 	
+	@Override
+	public String messageInit() {
+		return "";
+	}
+	
 }

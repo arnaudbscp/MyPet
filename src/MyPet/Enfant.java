@@ -52,5 +52,10 @@ public class Enfant extends Personnage {
 		return 3;
 	}
 	
+	@Override
+	public String messageInit() {
+		return "";
+	}
+	
 
 }

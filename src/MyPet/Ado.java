@@ -50,4 +50,9 @@ public class Ado extends Personnage {
         return 5;
     }
     
+    @Override
+	public String messageInit() {
+		return "";
+	}
+    
 }

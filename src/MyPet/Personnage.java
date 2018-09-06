@@ -80,6 +80,7 @@ public abstract class Personnage {
 	abstract int caresser();
 	abstract int mangerBoire();
 	abstract int jouer();
+	abstract String messageInit();
 	
 	public boolean estMort() {
 		if(jaugeVide(this.sante) || jaugeVide(this.faim) || (tempo/12)==13) return true;
