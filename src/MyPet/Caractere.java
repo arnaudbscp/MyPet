@@ -6,7 +6,10 @@ public enum Caractere {
     Joyeux("JOYEUX: :)"),
     Feneant("FENEANT: (*_*)"),
     Triste("TRISTE: :(("),
-    Maladif("MALADIF: \uD83D\uDE20");
+    Maladif("MALADIF: \uD83D\uDE20"),
+    Neutre("NEUTRE : O^O"), 
+    Afame("AFAME : 'O'"), 
+    Rassasie("RASSASIE : ~^~");
 
     private String caractere;
 
