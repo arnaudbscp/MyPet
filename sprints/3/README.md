@@ -1,6 +1,6 @@
-# Rétrospective de sprint 2
+# Rétrospective de sprint 3
 
-Nom du Scrum master du sprint : Titouan
+Nom du Scrum master du sprint : Margot
 
 ## Ce que nous avons fait durant ce sprint
 

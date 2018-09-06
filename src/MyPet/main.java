@@ -4,17 +4,12 @@ public class main {
 
 	public static void main(String[] args) {
 		Partie partie = new Partie("Caliméro");
-		int instruc = 0;
-		
-		
 		
 		Personnage perso = partie.getPet();
 		PetAfficheur.printPersonnage(perso);
 		
 		while(!perso.estMort()) {
-			
-			System.out.println("Que voulez-vous faire ?\n");
-			instruc = partie.lireInstruction();
+			int instruc = partie.lireInstruction();
 			
 			switch(instruc) {
 			
@@ -46,7 +41,6 @@ public class main {
 				System.out.println("Instruction incorrecte.");
 			}
 		}
-		
 		PetAfficheur.printPersonnage(perso);
 
 	}
