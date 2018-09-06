@@ -1,9 +1,9 @@
 package MyPet;
 
-public class Adulte extends Personnage{    
+public class Adulte extends Personnage{
+	
 	public Adulte(String prenom) {
 	    super(prenom);
-	    this.setDureeDeVie(6);
 	}    
 	
 	// avantage santé , -6 en energie, -4 en faim

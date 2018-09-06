@@ -37,6 +37,11 @@ public class Partie {
 		return false;
 	}
 	
+	public int getCompteurJours() {
+		return compteurJours;
+	}
+
+
 	public void finDePartie() {
 		//petAfficheur.affichageFin();
 		//PetAfficheur.affichageDebut();
@@ -50,5 +55,32 @@ public class Partie {
 	
 	public boolean verifEntree(int instruct) {
 		return instruct >=1 && instruct <=6;
+	}
+	
+	public void evolution() { // modifier duree de vie du stade, diviser par deux le nb de jours (passe trop vite)
+		System.out.println("a");
+		if(getPet().getDureeDeVie() == compteurJours) {
+			System.out.println("a");
+			if(getPet().getClass().getName() == "MyPet.Oeuf") {
+				Enfant e = new Enfant(getPet().getPrenom());
+				setPet(e);
+				getPet().setDureeDeVie(12);
+				System.out.println("ATTENTION!!! Il évolue !");
+			}else if(getPet().getClass().getName() == "MyPet.Enfant") {
+				Ado a = new Ado(getPet().getPrenom());
+				setPet(a);
+				getPet().setDureeDeVie(12);
+				System.out.println("ATTENTION!!! Il évolue encore!");
+			}else if(getPet().getClass().getName() == "MyPet.Ado") {
+				Adulte ad = new Adulte(getPet().getPrenom());
+				setPet(ad);
+				getPet().setDureeDeVie(12);
+				System.out.println("ATTENTION!!! Il évolue une dernière fois!");
+			}
+			else {
+				getPet().setSante(0);
+				System.out.println("Il est mort de vieillesse, bravo !");
+			}
+		}
 	}
 }

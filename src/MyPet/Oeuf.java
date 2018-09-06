@@ -4,7 +4,6 @@ public class Oeuf extends Personnage {
 
 	public Oeuf(String prenom) {
 		super(prenom);
-		this.setDureeDeVie(1);
 		this.setBonheur(5);
 		this.setEnergie(5);
 		this.setFaim(5);

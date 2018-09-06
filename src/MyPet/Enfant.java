@@ -4,7 +4,6 @@ public class Enfant extends Personnage {
 	
 	public Enfant(String prenom) {
 		super(prenom);
-		this.setDureeDeVie(3);
 	}
 
 	@Override
