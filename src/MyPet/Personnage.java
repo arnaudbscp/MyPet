@@ -8,6 +8,7 @@ public abstract class Personnage {
 	private int sante;
 	private int tempo;
 	private int dureeDeVie;
+	private Caractere caract;
 	
 	/* Declaration des variables des Paliers (personnage) */
 	int maxEnergie; 
@@ -110,6 +111,30 @@ public abstract class Personnage {
 		if (this.getEnergie()<0) { this.setEnergie(0);}
 		if (this.getBonheur()<0) { this.setBonheur(0);}
 	}
+	
+	void effetCaractere() {
+		switch(this.caract) {
+		
+		case Joyeux : this.setBonheur(this.getBonheur()+1);
+			break;
+			
+		case Feneant : this.setEnergie(this.getEnergie()-1);
+			break;
+			
+		case Triste : this.setBonheur(this.getBonheur()-1);
+			break;
+			
+		case Maladif : this.setSante(this.getSante()-1);
+			break;
+			
+		case Afame : this.setFaim(this.getFaim()-1);
+			break;
+			
+		case Rassasie : this.setFaim(this.getFaim()+1);
+			break;
+		}
+	}
+	
 	
 	abstract int soigner();
 	abstract int dormir();
