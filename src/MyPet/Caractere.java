@@ -8,7 +8,7 @@ public enum Caractere {
     Triste("TRISTE: :(("),
     Maladif("MALADIF: \uD83D\uDE20"),
     Neutre("NEUTRE : O^O"), 
-    Afame("AFAME : 'O'"), 
+    Affame("AFAME : 'O'"),
     Rassasie("RASSASIE : ~^~");
 
     private String caractere;
