@@ -22,7 +22,7 @@ public class Chifumi {
 		Scanner sc = new Scanner(System.in);
 		Random rand = new Random();
 		
-		System.out.println("Quel signe veux-tu jouer : \n"
+		System.out.println("Ton Pet veux jouer a Chifumi ! \n Quel signe veux-tu jouer ? "
 				+ "Pierre : 0, Papier : 1, Ciseau : 2.\n");
 		
 		String input = sc.nextLine();

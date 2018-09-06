@@ -10,7 +10,7 @@ public class MainApp {
 	public static void main(String[] args) {
 		PetAfficheur.printStart();
 		String nom;
-		System.out.print("         Comment voulez-vous appeler votre Pet ?");
+		System.out.print("         Comment voulez-vous appeler votre Pet ? ");
 		Scanner sc = new Scanner(System.in);
 		nom = sc.nextLine();
 		Partie partie = new Partie(nom);
@@ -94,9 +94,9 @@ public class MainApp {
 				partie.evolution();
 			}
 		}
-		
+		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 		PetAfficheur.printDead();
-		System.out.println("Votre Pet a survecu"+ partie.getCompteurJours()+ " jours,le pauvre.");
+		System.out.println("Votre Pet a survecu "+ partie.getCompteurJours()+ " jours,le pauvre.");
 	}
 
 	public static boolean hasard(int num) {
