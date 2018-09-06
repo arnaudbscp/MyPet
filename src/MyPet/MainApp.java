@@ -60,6 +60,7 @@ public class MainApp {
 				default:
 					System.out.println("Instruction incorrecte.");
 				}
+			perso.effetCaractere();
 			perso.verifiePalier();
 			perso.setTempo(tempo);
 			

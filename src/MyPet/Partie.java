@@ -66,6 +66,7 @@ public class Partie {
 				e.setFaim(getPet().getFaim());
 				e.setSante(getPet().getSante());
 				e.verifiePalier();
+				e.setCaract(Caractere.getRandomCar());
 				setPet(e);
 				getPet().setDureeDeVie(4);
 				System.out.println("ATTENTION!!! Il évolue ! On dirait qu'il a éclos !");
@@ -78,6 +79,7 @@ public class Partie {
 				a.setFaim(getPet().getFaim());
 				a.setSante(getPet().getSante());
 				a.verifiePalier();
+				a.setCaract(Caractere.getRandomCar());
 				setPet(a);
 				getPet().setDureeDeVie(7);
 				System.out.println("ATTENTION!!! Il évolue encore! C'est un ado maintenant.");
@@ -90,6 +92,7 @@ public class Partie {
 				ad.setFaim(getPet().getFaim());
 				ad.setSante(getPet().getSante());
 				ad.verifiePalier();
+				ad.setCaract(Caractere.getRandomCar());
 				setPet(ad);
 				getPet().setDureeDeVie(13);
 				System.out.println("ATTENTION!!! Il évolue une dernière fois! Il est très grand.");

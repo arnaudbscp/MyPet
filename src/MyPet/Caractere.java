@@ -8,7 +8,7 @@ public enum Caractere {
     Triste("TRISTE: :(("),
     Maladif("MALADIF: \uD83D\uDE20"),
     Neutre("NEUTRE : O^O"), 
-    Affame("AFAME : 'O'"),
+    Affame("AFFAME : 'O'"),
     Rassasie("RASSASIE : ~^~");
 
     private String caractere;
@@ -25,4 +25,8 @@ public enum Caractere {
          Random random = new Random();
          return values()[random.nextInt(values().length)];
      }
+
+	public void setCaractere(String caractere) {
+		this.caractere = caractere;
+	}
 }
