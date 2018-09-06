@@ -1,19 +1,19 @@
  +-------------------------------+ ;
  |            000000             | ;
- |          00##OOOO00           | ;
- |        00OO##OOOOOO00         | ;    Nom     : pet.nom
- |      00888888#0OOOOOO00       | ;
- |     0088888888##8OOOOO00      | ;    Faim    : [faim] jaugeFaim
- |    008888888888#888OOOO00     | ;    Energie : [energie] jaugeEnergie
- |    008888888888##8888OO00     | ;    Bonheur : [bonheur] jaugeBonheur
- |    0088888888888####88800     | ;    Santé   : [sante] jaugeSante
- |    0088888##888##88#88800     | ;
- |    00888888#####888888800     | ;
+ |          00■■OOOO00           | ;
+ |        00OO■■OOOOOO00         | ;    Nom     : pet.nom
+ |      00888888■0OOOOOO00       | ;
+ |     0088888888■■8OOOOO00      | ;    Faim    : [faim] jaugeFaim
+ |    008888888888■888OOOO00     | ;    Energie : [energie] jaugeEnergie
+ |    008888888888■■8888OO00     | ;    Bonheur : [bonheur] jaugeBonheur
+ |    0088888888888■■■■88800     | ;    Santé   : [sante] jaugeSante
+ |    0088888■■888■■88■88800     | ;
+ |    00888888■■■■■888888800     | ;
  |    0088888888888888888800     | ;  +------------------- MENU ------------------+
- |    00OOOO8888888888888800     | ;  |   2 : DORMIR                              |
- |     00OOOOO8888888888800      | ;  |   3 : SOIGNER                             |
- |      00OOOOOO8888888800       | ;  |   4 : CARESSER                            |
- |       00OOOOOO88888800        | ;  |   6 : LAVER                               |
- |        0000OOOOOO0000         | ;
- |          0000000000           | ;
- +-------------------------------+ ;
+ |    00OOOO8888888888888800     | ;  |   1 : MANGER                              |
+ |     00OOOOO8888888888800      | ;  |   2 : DORMIR                              |
+ |      00OOOOOO8888888800       | ;  |   3 : SOIGNER                             |
+ |       00OOOOOO88888800        | ;  |   4 : CARESSER                            |
+ |        0000OOOOOO0000         | ;  |   5 : JOUER                               |
+ |          0000000000           | ;  |   6 : LAVER                               |
+ +-------------------------------+ ;  +-------------------------------------------+
