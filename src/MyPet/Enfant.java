@@ -5,6 +5,12 @@ public class Enfant extends Personnage {
 	public Enfant(String prenom) {
 		super(prenom);
 		this.setDureeDeVie(3);
+		/* Initialisations des Paliers Enfants */
+		this.maxBonheur=9;
+		this.maxEnergie=3;
+		this.maxFaim=3;
+		this.maxSante=3;
+		
 	}
 
 	@Override

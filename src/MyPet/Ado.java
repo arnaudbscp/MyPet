@@ -4,7 +4,16 @@ public class Ado extends Personnage {
     
     public Ado(String prenom) {
         super(prenom);
+        /* Initialisations des Paliers Ados*/
+    	this.maxBonheur=6;
+    	this.maxEnergie=9;
+    	this.maxFaim=9;
+    	this.maxSante=3;
+        
     }
+    
+
+    
         @Override
     public int soigner() {
         this.setSante(getSante()+2);
