@@ -73,6 +73,9 @@ public class MainApp {
 						}else if(hasard(2)){
 							partie.chifumi();
 							tempo += perso.jouer();
+						}else if(hasard(2)) {
+							partie.gobelet();
+							tempo += perso.jouer();
 						}else {
 							tempo += perso.jouer();
 						}
