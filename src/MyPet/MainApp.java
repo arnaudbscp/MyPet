@@ -5,6 +5,7 @@ public class MainApp {
 	public static void main(String[] args) {
 		Partie partie = new Partie("Caliméro");
 		Personnage perso = partie.getPet();
+		Evenements e = new Evenements(perso);
         System.out.println(perso.messageInit());
         int tempo = 0;
 		
@@ -31,12 +32,21 @@ public class MainApp {
 			switch(choix) {
 				case 1:
 					tempo += perso.mangerBoire();
+					if(e.seProduit()) {
+						e.estMalade();
+					}
 					break;
 				case 2:
 					tempo += perso.dormir();
+					if(e.seProduit()) {
+						e.peurDuNoir();
+					}
 					break;
 				case 3:
 					tempo += perso.soigner();
+					if(e.seProduit()) {
+						e.seSentTriste();
+					}
 					break;
 				case 4:
 					tempo += perso.caresser();
