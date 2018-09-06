@@ -69,10 +69,10 @@ public class Oeuf extends Personnage {
 	@Override
 	public String messageInit() {
 		return "__Bonjour, je suis un oeuf. Si tu t'occupes de moi, je pourrais bien devenir quelque chose d'autre... =^o^=__\n"
-				+ "Tu peux me caresser, ça me rendrait sûrement plus heureux..."
-				+ "Tu peux me soigner, si tu trouves que je n'ai pas l'air très en forme..."
-				+ "Tu peux me laver, si j'ai une tâche sur le nez..."
-				+ "Tu peux aussi me faire 'dormir', si je te parais fatigué..."
+				+ "Tu peux me caresser, ça me rendrait sûrement plus heureux...\n"
+				+ "Tu peux me soigner, si tu trouves que je n'ai pas l'air très en forme...\n"
+				+ "Tu peux me laver, si j'ai une tâche sur le nez...\n"
+				+ "Tu peux aussi me faire 'dormir', si je te parais fatigué...\n"
 						+ "A TOI DE JOUER !";
 	}
 
