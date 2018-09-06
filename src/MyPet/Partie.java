@@ -37,12 +37,6 @@ public class Partie {
 		return compteurJours;
 	}
 
-
-	public void finDePartie() {
-		//Todo : Affichage de fin de partie
-		PetAfficheur.printPersonnage(pet);
-	}
-
 	public int lireInstruction() {
 		String input;
 		do {
