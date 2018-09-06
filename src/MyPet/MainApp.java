@@ -1,20 +1,25 @@
 package MyPet;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class MainApp {
 
 	public static void main(String[] args) {
-		Partie partie = new Partie("Caliméro");
+		String nom;
+		System.out.println("Comment voulez-vous appeler votre Pet ?");
+		Scanner sc = new Scanner(System.in);
+		nom = sc.nextLine();
+		Partie partie = new Partie(nom);
 		Personnage perso = partie.getPet();
 		Evenements e = new Evenements(perso);
         System.out.println(perso.messageInit());
         int tempo = 0;
-		
 		while(!perso.estMort()) {
+			System.out.println("\n");
+			System.out.println("\n");
 			perso = partie.getPet();
 			tempo = perso.getTempo();
-			
 			if(!perso.estMort()) {
 				if(perso.estAffame()) {
 					perso.perteSante();
