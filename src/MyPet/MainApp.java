@@ -25,10 +25,7 @@ public class MainApp {
 				System.out.println("Je suis trop triste, ça me fatigue !");
 			}
 			
-			
 			PetAfficheur.printPersonnage(perso);
-			
-			
 			
 			int choix  = partie.lireInstruction();
 			switch(choix) {

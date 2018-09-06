@@ -138,15 +138,15 @@ public abstract class Personnage {
 			break;
 			
 		case Maladif : perso.setSante(perso.getSante()-1);
-		System.out.println("Il a l'air d'être malade...");
+		System.out.println("Il a l'air d'être facilement malade...");
 			break;
 			
 		case Affame : perso.setFaim(perso.getFaim()-1);
-		System.out.println("Il a l'air d'avoir faim...");
+		System.out.println("Il a l'air d'avoir faim, non?...");
 			break;
 			
 		case Rassasie : perso.setFaim(perso.getFaim()+1);
-		System.out.println("Il a l'air d'avoir trop mangé...");
+		System.out.println("Il a l'air d'être gourmand...");
 			break;
 			
 		default:
